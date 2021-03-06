@@ -1,0 +1,625 @@
+/*
+        ==========================================================
+
+                        Publice Style
+
+        =======================================================
+*/
+
+*, *::after,*::before{margin: 0; padding: 0;} body{font-family: Arial, Helvetica, sans-serif;}
+
+.container{width: 85%; margin: auto; }
+
+body{
+    height: 3500px;
+}
+/*
+        ==========================================================
+
+                        Navbar Style
+
+        =======================================================
+*/
+
+.navbar{
+    padding: 20px 0;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+    border-bottom: 1px solid black;
+}
+
+.navbar input , .navbar label{
+    position: absolute;
+    top: 15px;
+    right: 25px;
+}
+
+.navbar label{
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url(Images/open.jpg) no-repeat;
+    padding: 20px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+@media (min-width:992px){
+    .navbar label{
+        display: none;
+    }
+}
+
+.navbar input {display: none;}
+.navbar .logo{
+    width: 50%;
+    float: left;
+}
+
+.navbar input:checked ~ .ul-list{
+    display: block;
+}
+
+navbar input:checked ~ label{
+    background: url(Images/open.jpg) no-repeat;
+    background-size: cover;
+}
+
+@media (max-width:991px) {
+    .navbar .logo{
+        width: 100%;
+        float: none;
+    }
+}
+
+.navbar .ul-list{
+    width: 50%;
+    float: left;
+    list-style: none;
+}
+
+@media (max-width:575px) {
+    .navbar .ul-list{
+        width: 100%;
+        float: none;
+        display: none;
+    }
+}
+
+.navbar .ul-list .li-item{
+    display: inline-block;
+}
+@media (max-width:575px) {
+    .navbar .ul-list .li-item{
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+.navbar .ul-list .li-item a{
+    display: block;
+    
+    color: #222;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+.navbar .ul-list .li-item a:hover{color: #eb5424; transition: all 0.5s;}
+.navbar .logo .logo-text{font-size: 30px; font-weight: bold;}
+
+
+/*
+        ==========================================================
+
+                        Home Style
+
+        =======================================================
+*/
+
+.home{
+    height: 500px;
+    background: url(Images/cover.png) no-repeat ;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    
+}
+
+.home-information{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.home-information .home-h2{
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.home-information .home-h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.home-information .home-p{
+    line-height: 1.5;
+}
+
+.home-information .home-button{
+    font-size: 18px;
+    width: 150px;
+    background: #eb5424;
+    color: #fff;
+    border: 0;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+
+/*
+        ==========================================================
+
+                        work Style
+
+        =======================================================
+*/
+
+
+.work{
+    height: auto;
+    padding: 50px 0;
+    overflow: hidden;
+    background: #fff;
+
+}
+
+.work .work-h2{
+    font-size: 60px;
+}
+.work .work-h2 span{
+    font-weight: normal;
+}
+
+.work .part1{
+    width: 30%;
+    float: left;
+    height: auto;
+    margin-top: 20px;
+    padding: 100px 0;
+    text-align: center;
+    border: 1px solid #888;
+    margin-left: 5%;
+    box-sizing: border-box;
+}
+.work .normal{
+    margin-left: 0;
+}
+.work .part1 .icon{
+    color: #888;
+    margin-bottom: 20px;
+}
+.work .part1 .part1-h4{
+    color: #eb5424;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#line{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+
+}
+.work .part1 .part1-p{
+    color: #888;
+    font-size: 14px;
+    padding: 20px;
+}
+
+@media (max-width:768px){
+    .work .part1{
+        width: 47%;
+    }
+
+    .work .last{
+        margin-left: 0;
+    }
+}
+
+@media (max-width:575px){
+    .work .part1{
+        width: 47%;
+        margin-left: 0;
+        float: none;
+    }
+
+}
+
+
+/*
+        ==========================================================
+
+                        portfolio Style
+
+        =======================================================
+*/
+
+.portfolio{
+    background: #f8f8f8;
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+.portfolio-h2{
+    text-align: center;
+    font-size: 35px;
+}
+.portfolio-h2 span{font-weight: normal;}
+.portfolio-ul{
+    list-style: none;
+    text-align: center;
+}
+
+.portfolio-li{
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+}
+.active{background: #eb5424; color: white;}
+
+.box div{
+    width: 25%;
+    float: left;
+    font-size: 0;
+    position: relative;
+}
+
+.box div img{
+    width: 100%;
+    
+}
+.box div .overlay span{
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background:#fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid #eb5424;
+    display: block;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+
+}
+
+.box div:hover .overlay{
+    opacity: 1;
+}
+
+@media (max-width:775px){
+    .portfolio-li{
+        display: block;
+        margin: auto;
+    }
+
+    .box div {
+        width: 100%;
+    }
+}
+
+@media (min-width:576px) and (max-width: 768px){
+    .box div{
+        width: 50%;
+    }
+}
+
+
+
+/*
+        ==========================================================
+
+                        profile + skills Style
+
+        =======================================================
+*/
+
+
+.profile-skills{
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.profile-skills .profile{
+    width: 50%;
+    float: left;
+}
+
+.profile-skills .profile .profile-ul{
+    list-style: none;
+}
+.profile-skills .profile .profile-ul .profile-li{
+    margin-bottom: 8px;
+}
+.profile-skills .profile .profile-ul .profile-li span{
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+
+}
+
+.profile-skills .profile .profile-ul .profile-li span.web{
+    font-weight: normal;
+    color: #eb5424;
+}
+.profile-h2,.skills-h2{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.profile-h2 span,.skills-h2 span{
+    font-weight: normal;
+}
+
+.profile-skills .skills{
+    width: 50%;
+    float: left;
+}
+
+.profile-skills .skills .skills-p{
+    font-size: 15px;
+    color: #888;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.profile-skills .skills .bar{
+    margin-bottom: 10px;
+    
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.profile-skills .skills .bar .title{
+    float: left;
+}
+
+.profile-skills .skills .bar .perc{
+    float: right;
+    margin-right: 100px;
+}
+
+.profile-skills .skills .bar .parent {
+    height: 2px;
+    clear: both;
+    
+    position: relative;
+    top: 10%;
+}
+.profile-skills .skills .bar .parent span{
+    background: #eb5424;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.profile-skills .skills .bar .parent span.sp1{
+    
+    width: 100%;
+}
+
+.profile-skills .skills .bar .parent span.sp2{
+    
+    width: 90%;
+}
+
+.profile-skills .skills .bar .parent span.sp3{
+    
+    width: 80%;
+}
+
+@media (max-width:575px){
+    .profile-skills .profile,
+    .profile-skills .skills{
+        width: 100%;
+        float: none;
+    }
+
+    .profile-skills .profile{
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/*
+        ==========================================================
+
+                        creative Style
+
+        =======================================================
+*/
+
+.creative{
+    height: 500px;
+    background: url(Images/coverPage2.PNG);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.creative .creative-info{
+    padding-top: 50px;
+    width: 50%;
+    float: right;
+}
+
+.creative-info-h2{
+    font-weight: bold;
+    font-size: 50px;
+}
+.creative-info-h2 span{
+    font-weight: normal;
+}
+
+.creative-info-h4{
+    font-size: 40px;
+    color: #eb5424;
+    margin-bottom: 20px;
+}
+.creative-info-p{
+    color: #888;
+    line-height: 1.8;
+
+}
+
+/*
+        ==========================================================
+
+                        socail-media Style
+
+        =======================================================
+*/
+
+.socail-media{
+    height: auto;
+    overflow: hidden;
+}
+
+.socail-media .social{
+    width: 33.33%;
+    float: left;
+    box-sizing: border-box;
+    padding: 100px 0 100px 60px;
+}
+
+.socail-media .social.face{
+    background: #3b5998;
+}
+
+.socail-media .social.twitter{
+    background: #498cbf;
+}
+
+.socail-media .social.pin{
+    background: #cc2127;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    background: white;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    margin-right: 10px;
+    
+}
+
+.socail-media .social p span{
+    display: block;
+    margin-bottom: 8px;
+}
+.socail-media .social p span.info2{
+    font-weight: normal;
+}
+
+@media (max-width:991px){
+    .socail-media .social{
+        width: 100%;
+        float: none;
+
+    }
+}
+
+
+/*
+        ==========================================================
+
+                        Drop Style
+
+        =======================================================
+*/
+
+.drop{
+    padding: 50px 0;
+    text-align: center;
+}
+
+.drop-h2{
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+.drop-h2 span{
+    font-weight: normal;
+}
+
+.drop form{
+    width: 70%;
+    
+    margin: auto;
+}
+.drop form .form-input{
+    overflow: hidden;
+}
+.drop form .form-input input{
+    width: 49%;
+    
+}
+
+.drop  form input{
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.drop form .form-input input[type=text]{
+    float: left;
+}
+
+.drop form .form-input input[type=email]{
+    float: right;
+}
+
+.drop form input.sub{
+    display: inline-block;
+    width: 100%;
+}
+
+textarea{
+    width: 100%;
+    background: #ccc;
+}
+
+.drop form  input[type=submit]{
+    width: 60%;
+    background: white;
+    border: 1px solid #ccc;
+    color: #888;
+    cursor: pointer;
+}
+
+
+/*
+        ==========================================================
+
+                        Footer Style
+
+        =======================================================
+*/
+
+
+.footer{
+    text-align: center;
+}
+
+.footer p{
+    color: #888;
+}
